@@ -1,10 +1,13 @@
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, CallbackQueryHandler, ContextTypes, MessageHandler, filters
 import pandas as pd
+from dotenv import load_dotenv
 import os
 
-TOKEN = "8578066007:AAF8y6RVEVOMNKua6eX237dBmSEqqeJuM4E"
-ADMIN_USER_ID = 5132850306
+load_dotenv()
+
+TOKEN = os.getenv("BOT_TOKEN")
+ADMIN_USER_ID = os.getenv("Id")
 # Временное хранилище данных
 user_data = {}
 sc_data = {}
