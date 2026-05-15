@@ -7,7 +7,7 @@ import os
 load_dotenv()
 
 TOKEN = os.getenv("BOT_TOKEN")
-ADMIN_USER_ID = os.getenv("Id")
+ADMIN_USER_ID = int(os.getenv("ID"))
 # Временное хранилище данных
 user_data = {}
 sc_data = {}
